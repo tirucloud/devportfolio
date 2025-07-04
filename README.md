@@ -58,3 +58,10 @@ docker stack deploy -c docker-compose.yml my-portfolio
 ```
 docker exec [CONTAINER ID GOES HERE] python3 /app/init_db.py
 ```
+```
+docker stack services my-portfolio
+docker stack ps my-portfolio
+docker service ls
+docker service scale my-portfolio_updater=3
+docker service scale my-portfolio_web=3
+```
