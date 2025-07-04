@@ -78,3 +78,7 @@ docker service ls
 docker service scale my-portfolio_updater=3
 docker service scale my-portfolio_web=3
 ```
+8. To stop our stack, we use he following command:
+```
+docker stack rm my-portfolio
+```
