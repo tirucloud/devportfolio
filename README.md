@@ -49,14 +49,14 @@ services:
 4. activate swarm more and deploy the GUI and database services in a stack:
 This will create a new swarm with our machine as the manager node. From a manager node (like our machine right now) we can execute the following commands:
 
-docker swarm join-token worker
-docker swarm join-token manager
+docker swarm join-token worker <br>
+docker swarm join-token manager <br>
 These will give us the commands needed to join the swarm as a worker and manager node respectively. Those commands will look like this:
 
-docker swarm join --token <token> <ip>:<port>
+docker swarm join --token <token> <ip>:<port> <br>
 Where <token>, <ip> and <port> need to be replaced with the parameters given with the join-token command. Since manager nodes may also act as a worker node, you may continue using only your machine (in case you don’t have access to others). Once we have our swarm up we can deploy our stack with the following command:
 
-docker stack deploy --compose-file docker-stack.yml my-portfolio
+docker stack deploy --compose-file docker-stack.yml my-portfolio <br>
 Here, the –compose-file flag (or -c) allows us to select the configuration file where we define our services, and we are naming the stack as “myapp”. As I mentioned earlier, this stack name will be used as a prefix for the services, containers, volumes and networks names. You can check this with the following command:
 
 docker stack services my-portfolio
