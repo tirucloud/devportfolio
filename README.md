@@ -46,7 +46,7 @@ services:
       restart_policy:
         condition: any
 ```
-4. activate swarm more and deploy the GUI and database services in a stack:
+4. Activate swarm and deploy the GUI and database services in a stack:
 This will create a new swarm with our machine as the manager node. From a manager node (like our machine right now) we can execute the following commands:
 
 docker swarm join-token worker <br>
