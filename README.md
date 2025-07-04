@@ -2,7 +2,7 @@
 ### 🏠 Develop Locally 🏠
 1. Run your app and view it in your browser @ `localhost` or `localhost:80`:
 ```
-cd dev_portfolio_simplified
+cd devportfolio
 docker compose up
 ```
 2. update `init_db.py` with your personal information and projects.
